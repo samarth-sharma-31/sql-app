@@ -1,9 +1,8 @@
 import { debounce } from 'lodash'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { faker } from '@faker-js/faker';
 import { EMPLOYEES_DATA } from '../mocks'
 import { copyContentToClipboard } from '../utils'
-import { SignalCellularNull } from '@mui/icons-material'
 
 enum SupportedQueries {
   Customers = 'select * from customers;',
@@ -62,7 +61,7 @@ export function SqlQueryExecutionContextProvider(props: React.PropsWithChildren<
     setQueryExecutionError(false)
 
     // use query to set data
-    // set timeout with a 3sec delay has been used to stimulate async query execution and loading state
+    // set timeout with a 2sec delay has been used to stimulate async query execution and loading state
     setTimeout(() => {
       // set some mock data
       const queryGetterFn = SUPPORTED_QUERIES_VS_DATA_GETTER[query?.toLowerCase().trim() as SupportedQueries]

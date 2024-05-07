@@ -9,12 +9,6 @@ html {
   font-family:'Open Sans';
 }
 
-body {
-  /* background-image: url("images/app-background.jpg");
-  background-size: cover;
-  background-position: center; */
-}
-
 .app-container {
   height: 100vh;
   font-family: sans-serif;
@@ -157,13 +151,6 @@ body {
 
 .editor-header-label {
   font-weight: bold;
-}
-
-.react-monaco-editor-container {
-  // border: 1px solid #E5E5E5;
-}
-
-.main-monaco-editor {
 }
 
 .execute-query-btn {
