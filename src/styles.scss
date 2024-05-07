@@ -1,0 +1,282 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+html {
+  font-size: 90%;
+  font-family:'Open Sans';
+}
+
+body {
+  /* background-image: url("images/app-background.jpg");
+  background-size: cover;
+  background-position: center; */
+}
+
+.app-container {
+  height: 100vh;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+// Add dark theme styles
+
+.dark__theme {
+
+  .page-body {
+    background-color: #0c0c0c;
+  }
+
+  .page-header-container {
+    background-color: #0c0c0c;
+    color: white;
+
+    .page-header-label {
+      color: #ffffff;
+    }
+  }
+
+  .editor-header-container {
+    background-color: #0c0c0c;
+    color: white;
+  }
+
+  .execute-query-btn {
+    background-color: white !important;
+    color: #0c0c0c !important;
+  }
+
+  .sql-data-container-header {
+    color: white;
+    background-color: #0c0c0c;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .sql-data-table-container {
+    background-color: #1e1e1e;
+  }
+
+  .data-table-grid {
+    color: white;
+  }
+
+  .data-table-header {
+    color: white;
+  }
+}
+
+.page-body {
+  background-color: #f3f3fa;
+}
+
+.page-header-container {
+  background-color: #fafbfc;
+}
+
+.parent-1 {
+  .sql-label {
+    color: red;
+    font-size: 32px;
+  }
+}
+
+.sql-label {
+  color: blue;
+  font-size: 16px;
+}
+
+.page-heading {
+  margin-top: 10%;
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid #E5E5E5;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+}
+
+.theme-toggle-container {
+  cursor: pointer;
+}
+
+
+.page-header-label-container {
+  display: flex;
+}
+
+.page-header-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #22222a;
+  margin-left: 0.5rem;
+}
+
+.panel-group {
+  height: calc(100vh - 4.5rem) !important;
+  padding: 2rem 4rem;
+}
+
+.resize-icon-container {
+  position: relative;
+  height: 24px;
+
+  .resize-svg {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.editor-header-container {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 8px 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #fafbfc;
+}
+
+.sql-editor-panel {
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+  overflow: visible !important;
+  background: white;
+}
+
+.editor-header-label {
+  font-weight: bold;
+}
+
+.react-monaco-editor-container {
+  // border: 1px solid #E5E5E5;
+}
+
+.main-monaco-editor {
+}
+
+.execute-query-btn {
+  background-color: #22222a !important;
+  color: white !important;
+}
+
+.copy-query-button {
+  margin-right: 0.75rem;
+  cursor: pointer;
+
+  .copy-query-icon-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.decorationsOverviewRuler {
+  visibility: hidden;
+}
+
+.sql-data-container-header {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 8px 12px;
+  font-weight: bold;
+  background-color: #fafbfc;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.sql-data-header-row-count {
+  font-weight: normal;
+}
+
+.sql-data-container {
+  border: 1px solid #E5E5E5;
+  border-radius: 0.5rem;
+}
+
+.sql-data-table-container {
+  background-color: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow-y: scroll;
+  position: relative;
+
+  .no-results {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-weight: bold;
+    color: #b0b1c4;
+  }
+}
+
+.sql-data-table-inner-container {
+  width: 100%;
+  margin-left: calc((100% - 800px)/2);
+  height: 100%;
+}
+
+.sql-data-table {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.spinner {
+  border: 3px solid lightgrey;
+  border-top-color: royalblue;
+  animation: spin 0.5s linear infinite;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.data-table-row {
+  display: flex;
+
+  div[role="gridcell"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.data-table-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid #E5E5E5; 
+}
+
+.sql-table-cell {
+  border: 1px solid #E5E5E5; 
+}
